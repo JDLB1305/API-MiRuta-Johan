@@ -3,7 +3,7 @@ $(document).ready(function(){
     let contenedorCardsUsuarios = document.querySelector('#contenedorCardsUsuarios')
     contenedorCardsUsuarios.innerHTML = ''
     $.ajax({
-        url: "http://localhost:8080/usuario/listar",
+        url: "https://api-miruta-johan-production.up.railway.app/usuario/listar",
         type: "GET",
         datatype: "JSON",
         success:function(respuesta){

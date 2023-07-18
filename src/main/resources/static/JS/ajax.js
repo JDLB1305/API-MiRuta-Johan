@@ -5,7 +5,7 @@ $(document).ready(function(){
         let eliminar_parada = $('#idParadaEli').val();
         console.log(eliminar_parada)
         $.ajax({
-            url: "http://localhost:8080/parada/eliminar/"+parseInt(eliminar_parada),
+            url: "https://api-miruta-johan-production.up.railway.app/parada/eliminar/"+parseInt(eliminar_parada),
             type: "DELETE",
             datatype: "JSON",
             success: function eliminar_parada(respuesta) {
@@ -33,7 +33,7 @@ $(document).ready(function(){
         let datosEnvio = JSON.stringify(datos)
         console.log(datosEnvio)
         $.ajax({
-            url: "http://localhost:8080/parada/guardar",
+            url: "https://api-miruta-johan-production.up.railway.app/parada/guardar",
             type: "POST",
             data: datosEnvio,
             contentType: "application/JSON",
@@ -64,7 +64,7 @@ $(document).ready(function(){
         let datosEnvio = JSON.stringify(datos)
         console.log(datosEnvio)
         $.ajax({
-            url: "http://localhost:8080/parada/actualizar",
+            url: "https://api-miruta-johan-production.up.railway.app/parada/actualizar",
             type: "PUT",
             data: datosEnvio,
             contentType: "application/JSON",
@@ -94,7 +94,7 @@ $(document).ready(function(){
         let eliminar_ruta = $('#idRutaEli').val();
         console.log(eliminar_ruta)
         $.ajax({
-            url: "http://localhost:8080/ruta/eliminar/"+parseInt(eliminar_ruta),
+            url: "https://api-miruta-johan-production.up.railway.app/ruta/eliminar/"+parseInt(eliminar_ruta),
             type: "DELETE",
             datatype: "JSON",
             success: function eliminar_ruta(respuesta) {
@@ -129,7 +129,7 @@ $(document).ready(function(){
         let datosEnvio = JSON.stringify(datos)
         console.log(datosEnvio)
         $.ajax({
-            url: "http://localhost:8080/ruta/guardar",
+            url: "https://api-miruta-johan-production.up.railway.app/ruta/guardar",
             type: "POST",
             data: datosEnvio,
             contentType: "application/JSON",
@@ -167,7 +167,7 @@ $(document).ready(function(){
         let datosEnvio = JSON.stringify(datos)
         console.log(datosEnvio)
         $.ajax({
-            url: "http://localhost:8080/ruta/actualizar",
+            url: "https://api-miruta-johan-production.up.railway.app/ruta/actualizar",
             type: "PUT",
             data: datosEnvio,
             contentType: "application/JSON",
@@ -205,7 +205,7 @@ $(document).ready(function(){
         console.log(datosEnvio);
     
         $.ajax({
-            url: "http://localhost:8080/bus/guardar",
+            url: "https://api-miruta-johan-production.up.railway.app/bus/guardar",
             type: "POST",
             data: datosEnvio,
             contentType: "application/JSON", 
@@ -243,7 +243,7 @@ $(document).ready(function(){
         let eliminar_bus = $('#BusEli').val();
         console.log(eliminar_bus)
         $.ajax({
-            url: "http://localhost:8080/bus/eliminar/"+eliminar_bus,
+            url: "https://api-miruta-johan-production.up.railway.app/bus/eliminar/"+eliminar_bus,
             type: "DELETE",
             datatype: "JSON",
             success: function eliminar_bus(respuesta) {
@@ -275,7 +275,7 @@ $(document).ready(function(){
         let datosEnvio = JSON.stringify(datos)
         //console.log(datosEnvio)
         $.ajax({
-            url: "http://localhost:8080/usuario/login",
+            url: "https://api-miruta-johan-production.up.railway.app/usuario/login",
             type: "POST",
             data: datosEnvio,
             contentType: "application/JSON",
@@ -355,7 +355,7 @@ $(document).ready(function(){
         let datosEnvio = JSON.stringify(datos)
         console.log(datosEnvio)
         $.ajax({
-            url: "http://localhost:8080/usuario/guardar",
+            url: "https://api-miruta-johan-production.up.railway.app/usuario/guardar",
             type: "POST",
             data: datosEnvio,
             contentType: "application/JSON",
@@ -387,7 +387,7 @@ $(document).ready(function(){
         let eliminar_usu = $('#UsuEli').val();
         console.log(eliminar_usu)
         $.ajax({
-            url: "http://localhost:8080/usuario/eliminar/"+eliminar_usu,
+            url: "https://api-miruta-johan-production.up.railway.app/usuario/eliminar/"+eliminar_usu,
             type: "DELETE",
             datatype: "JSON",
             success: function eliminar_usuario(respuesta) {
@@ -422,7 +422,7 @@ $(document).ready(function(){
         let datosEnvio = JSON.stringify(datos)
         console.log(datosEnvio)
         $.ajax({
-            url: "http://localhost:8080/usuario/comprobar",
+            url: "https://api-miruta-johan-production.up.railway.app/usuario/comprobar",
             type: "POST",
             data: datosEnvio,
             contentType: "application/JSON",
@@ -453,7 +453,7 @@ $(document).ready(function(){
                 
                 if (respuestaProcesada == parseInt(pin)){
                     $.ajax({
-                        url: "http://localhost:8080/usuario/guardar",
+                        url: "https://api-miruta-johan-production.up.railway.app/usuario/guardar",
                         type: "POST",
                         data: datosEnvio,
                         contentType: "application/JSON",
@@ -498,7 +498,7 @@ $(document).ready(function(){
         let datosEnvio = JSON.stringify(datos)
         console.log(datosEnvio)
         $.ajax({
-            url: "http://localhost:8080/usuario/actualizar",
+            url: "https://api-miruta-johan-production.up.railway.app/usuario/actualizar",
             type: "PUT",
             data: datosEnvio,
             contentType: "application/JSON",

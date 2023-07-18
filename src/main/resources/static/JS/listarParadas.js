@@ -3,7 +3,7 @@ $(document).ready(function(){
     let contenedorCardsParadas = document.querySelector('#contenedorCardsParadas')
     contenedorCardsParadas.innerHTML = ''
     $.ajax({
-        url: "http://localhost:8080/parada/listar",
+        url: "https://api-miruta-johan-production.up.railway.app/parada/listar",
         type: "GET",
         datatype: "JSON",
         success:function(respuesta){

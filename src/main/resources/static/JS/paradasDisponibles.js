@@ -4,7 +4,7 @@ $(document).ready(function(){
     let selectParadasFin = document.querySelector('#lugar_fin')
     let selectParadasBuscar = document.querySelector('#ver_paradas')
     $.ajax({
-        url: "http://localhost:8080/parada/listar",
+        url: "https://api-miruta-johan-production.up.railway.app/parada/listar",
         type: "GET",
         datatype: "JSON",
         success:function ver_parada_mapa(respuesta){

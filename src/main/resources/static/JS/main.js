@@ -123,7 +123,7 @@ function eliminarFavorito(index) {
   // Realizar la solicitud AJAX
   $.ajax({
     type: 'POST',
-    url: 'http://localhost:8080/ruta/eliminarFav',
+    url: 'https://api-miruta-johan-production.up.railway.app/ruta/eliminarFav',
     data: JSON.stringify(usuarioHasRutaModelo),
     contentType: 'application/json',
     success: function (response) {
@@ -166,7 +166,7 @@ function agregarFavorito(index) {
   // Realizar la solicitud AJAX
   $.ajax({
     type: 'POST',
-    url: 'http://localhost:8080/ruta/agregarFav',
+    url: 'https://api-miruta-johan-production.up.railway.app/ruta/agregarFav',
     data: JSON.stringify(usuarioHasRutaModelo),
     contentType: 'application/json',
     success: function (response) {

@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     let contenedorCardsFavoritos = document.querySelector('#contenedorCardsFavoritos')
     $.ajax({
-        url: "http://localhost:8080/ruta/listarFav/"+localStorage.getItem("UsuCorreo"),
+        url: "https://api-miruta-johan-production.up.railway.app/ruta/listarFav/"+localStorage.getItem("UsuCorreo"),
         type: "GET",
         datatype: "JSON",
         success:function(respuesta){

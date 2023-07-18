@@ -4,7 +4,7 @@ $(document).ready(function(){
     contenedorCardsRuta.innerHTML = '';
 
     $.ajax({
-        url: "http://localhost:8080/ruta/listar",
+        url: "https://api-miruta-johan-production.up.railway.app/ruta/listar",
         type: "GET",
         datatype: "JSON",
         success:function(respuesta){
