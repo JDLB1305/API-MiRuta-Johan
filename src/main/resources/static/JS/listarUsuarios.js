@@ -12,10 +12,10 @@ $(document).ready(function(){
                     let stringTipo = ""
                     let fondoUsu = ""
                     //console.log(tipoUsu)
-                    if (tipoUsu == 1){
+                    if (tipoUsu == 0){
                         stringTipo = "Administrador"
                         fondoUsu = "background: linear-gradient(to bottom left, #FFB740 50%, #FDE49C 50%);"
-                    } else  if (tipoUsu == 0){
+                    } else  if (tipoUsu == 1){
                         stringTipo = "Usuario"
                         fondoUsu = "background: linear-gradient(to bottom left, #B8DFD8 50%, #E8F6EF 50%);"
                     } else {
