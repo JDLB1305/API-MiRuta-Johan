@@ -129,7 +129,6 @@ public class UsuarioServicioImpl implements InUsuarioServicio{
         Usuario usuario = usuarioDao.findById(usu.getIdUsu()).orElseThrow(() -> new NoSuchElementException("El usuario con identificación " + usu.getIdUsu() + " no existe en la base de datos"));
 
         if(usuario.getIdUsu() != null){
-            usuario.setCorreoUsu(usu.getCorreoUsu());
             usuario.setContraseniaUsu(usu.getContraseniaUsu());
             usuario.setNombreUsu(usu.getNombreUsu());
             usuario.setFotoUsu(usu.getFotoUsu());
@@ -149,9 +148,17 @@ public class UsuarioServicioImpl implements InUsuarioServicio{
     public String guardarUsuario(Usuario usuario) {
         usuario.setContraseniaUsu(encryptContrasenia(usuario.getContraseniaUsu()));
         usuarioDao.save(usuario);
-        return "{\n" +
-                "\"registro\": true\n" +
+
+        // Obtener ID del Usuario creado recien
+        Long idUsu = usuario.getIdUsu();
+
+        // Creacion de JSON incluyendo el ID
+        String jsonResponse = "{\n" +
+                "\"registro\": true,\n" +
+                "\"idUsu\": " + idUsu + "\n" +
                 "}";
+        
+        return jsonResponse;
     }
 
 

@@ -1,7 +1,6 @@
 package com.miruta.api.entidades;
 
 import jakarta.persistence.*;
-import org.hibernate.Length;
 
 import java.io.Serializable;
 import java.util.Set;
